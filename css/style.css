@@ -1,0 +1,479 @@
+/********** IMPORTACIÓN FUENTES **********/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/********** ESTILOS GENERALES **********/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a svg {
+    fill: #fff;
+}
+
+strong {
+    font-weight: 700 !important;
+    text-shadow: 1px 2px black;
+    color: #CD0404;
+}
+
+/********** HEADER **********/
+
+header {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    background-image: url(../img/header-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+header .cover .menu-fixed {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding: 15px 30px 30px;
+    background: linear-gradient(180deg, rgba(0,0,0,.5) 65%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+header .cover .menu-fixed span a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #CD0404;
+}
+
+header .cover .menu-fixed ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+    color: white;
+    list-style: none;
+}
+
+header .cover .menu-fixed ul li {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+header .cover .menu-fixed ul li.login {
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    background-color: #CD0404;
+}
+
+header .cover .menu-fixed ul li.login:hover {
+    background-color: #c00303;
+}
+
+header .cover .menu-fixed ul li.login a {
+    font-weight: 600;
+}
+
+header .cover .menu-fixed ul li.login a:hover {
+    color: #fff;
+}
+
+header .cover .menu-fixed ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
+header .cover .menu-fixed ul li a:hover {
+    font-weight: 700;
+    color: #fff;
+}
+
+header .cover .menu-fixed ul li a:hover {
+    color: rgb(206, 206, 206);
+}
+
+header .cover .text-header {
+    width: 50%;
+}
+
+header .cover .text-header h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+header .cover .text-header h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+}
+
+header .cover .text-header p {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+}
+
+header .cover .text-header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .cover .text-header form #subscribe-field {
+    width: 45%;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+}
+
+header .cover .text-header form input[type=submit] {
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    background-color: #CD0404;
+    border: none;
+}
+
+header .cover .text-header form input[type=submit]:hover {
+    background-color: #a10101;
+}
+
+/********** BODY **********/
+
+/***** SLIDER *****/
+
+body #catalogo {
+    width: 100%;
+    height: 100vh;
+    background-color: #141414;
+}
+
+body #catalogo .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(14, 29, 51, 0.8), rgba(14, 29, 51, 0.2)); 
+}
+
+body .slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+body .slider .flickity-slider {
+    height: 100vh;
+}
+
+body .slider .carousel-cell {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+body .slider .carousel-cell .inner {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center; 
+}
+      
+body .slider .carousel-cell .inner .subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 40px;
+    line-height: 1.2em;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px; 
+}
+
+body .slider .carousel-cell .inner .title {
+    font-family: 'Poppins';
+    font-size: 60px;
+    /* line-height: 1.2em; */
+    text-transform: uppercase;
+    /* letter-spacing: 3px; */
+    margin-bottom: 40px; 
+}
+      
+body .slider .carousel-cell .inner .btn {
+    border: 1px solid #fff;
+    padding: 14px 18px;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease; 
+}
+
+body .slider .carousel-cell .inner .btn:hover {
+    border: 1px solid #CD0404;
+    background: #CD0404;
+    color: #fff; 
+}
+
+body .slider .flickity-prev-next-button {
+    display: none;
+}
+
+body .slider .flickity-page-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 60px; 
+    padding: 0;
+}
+
+body .slider .flickity-page-dots .dot {
+    width: 30px;
+    height: 4px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0 solid white;
+    border-radius: 0; 
+}
+
+body .slider .flickity-page-dots .dot.is-selected {
+    background: #CD0404;
+    border: 0 solid #CD0404; 
+}
+
+body .slider .flickity-page-dots .dot::marker {
+    color: transparent;
+}
+
+@media screen and (max-width: 576px) {
+    body .slider {
+        width: 90%;
+        margin-left: auto;
+    }
+    
+    body .slider .carousel-cell .inner .subtitle {
+        font-size: 1.2rem;
+    }
+
+    body .slider .carousel-cell .inner .title {
+        font-size: 1.5rem;
+    }
+
+    body .slider .carousel-cell .inner .btn {
+        font-size: 0.4rem;
+    }
+}
+
+/***** TABLA *****/
+
+body #planes {
+    background-color: #141414;
+}
+
+body #planes .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body #planes .container .cabecera {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+body #planes .container .cabecera h2 {
+    font-size: 70px;
+    font-weight: 500;
+}
+
+body #planes .container .cabecera p {
+    font-size: 30px;
+    font-weight: 200;
+    color: #CD0404;
+}
+
+body #planes table {
+    margin: auto;
+    color: #fff;
+}
+body #planes table .cost {
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+}
+
+body #planes table .cost span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #CD0404;
+}
+
+body #planes table svg {
+    fill: #CD0404;
+}
+
+/***** LOGIN *****/
+body#login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #141414;
+}
+
+body#login .logo-login {
+    position: fixed;
+    top: 15px;
+    left: 30px;
+}
+
+body#login .logo-login span a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #CD0404;
+}
+
+body#login .panel {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/back-login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body#login .panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 60px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    /*box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;*/
+}
+
+body#login .panel form .title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+body#login .panel form .input.text {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+body#login .panel form .input.button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #CD0404;
+}
+
+body#login .panel form .input.button:hover {
+    background-color: #a10101;
+}
+
+body#login .panel form span:first-of-type {
+    margin-top: 15px;
+}
+
+body#login .panel form span a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-size: 12px;
+    color: rgb(216, 216, 216);
+}
+
+body#login .panel form span a:hover {
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+@media (max-width: 576px) {
+    body#login .logo-login {
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    body#login .panel form {
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        padding: 60px 30px;
+    }
+}
+
+/********** FOOTER **********/
+
+footer {
+    padding: 20px 30px;
+    background-color: #141414;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer .container .redes{
+    padding-bottom: 10px;
+}
+
+footer .container .redes a {
+    margin: 5px;
+}
+
+footer .container .redes a svg {
+    fill: #fff;
+}
+
+footer .container .copyright {
+    color: rgb(181, 181, 181);
+    font-size: 12px;
+    font-weight: 200;
+}
