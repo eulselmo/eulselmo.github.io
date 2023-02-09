@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:wght@300;500;600;700display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.landing-body {
+    margin: 0;
+    padding: 0;
+    /* background-color:#57b64f; */
+    position:relative;
+    overflow-y: hidden;
+    background-color: #000; 
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px; */
+    /* background: url(../img/herohon.jpg) no-repeat center center;
+    background-size: cover; */
+}
+
+.landing-body h1 {
+    color:#3a4151;
+    position:absolute;
+    right:20px;
+    /* bottom:-100vh; */
+    text-transform:uppercase;
+    text-align:right;
+    font-size:60px;
+    font-weight:700;
+}
+
+.landing-body a {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* MENU VERTICAL */
+#mainHeader {
+	width: 60px;
+	height: 100%;
+	left: 0;
+	transition: left 0.5s ease-in-out 0.2s; 
+	position:fixed;
+	display:inline-block;
+	background-color:#3a4151;
+	z-index: 1000;
+}
+
+#mainHeader nav {
+	height:100%;
+	width: 60px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#mainHeader nav .top-header {
+	background-color:#3a4151;
+	position:relative;
+}
+
+#mainHeader nav:after {
+	content:' ';
+	background-color: #3a4151;
+	width: 60px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+#mainHeader nav:before {
+	content:' ';
+	height:100%;
+	width: 0px;
+	background-color:#424a5c;
+    position: absolute;
+    left: 60px;
+    transition: width 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#mainHeader nav .navBurger {
+	cursor: pointer;
+	width:100%;
+	height:45px;
+}
+
+#mainHeader nav .navBurger .burger {
+	margin-left: 18px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+#mainHeader nav .navBurger .burger,
+#mainHeader nav .navBurger .burger::before,
+#mainHeader nav .navBurger .burger::after {
+    content: "";
+	display: block;
+    border-radius:2px;
+	position: absolute;
+	z-index:100;
+	width: 24px;
+	height: 4px;
+	background: white;
+	transition: all 0.3s;
+}
+
+#mainHeader nav .navBurger .burger::before,
+#mainHeader nav .navBurger .burger::after {
+    content: "";
+    display: block;
+}
+
+#mainHeader nav .navBurger .burger::before {
+    margin-top: -8px;
+}
+
+#mainHeader nav .navBurger .burger::after {
+    margin-top: 8px;
+}
+
+#mainHeader nav ul {
+    position: absolute;
+    margin:0;
+    padding:0;
+    width: 100%;
+    margin-top: calc(50vh - 160px);
+}
+
+#mainHeader nav ul li {
+    font-size: 18px;
+    /* width: 60px; */
+    width: 200px;
+    height: 40px;
+	cursor: pointer;
+    position: relative;
+    /* display: block; */
+    display: flex;
+    align-items: center;
+}
+
+#mainHeader nav ul li:before {
+	z-index:10;
+	content:' ';
+	width: 8px;
+    height: 8px;
+    background-color: transparent;
+    position: absolute;
+    left: 26px;
+    top: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transform: scale(1) translate3d(0,0,0);
+    transition: all 0.2s ease-in-out;
+}
+
+#mainHeader nav ul li:hover:before {
+	background-color: white;
+}
+
+#mainHeader nav ul li.active:before, 
+#mainHeader nav ul li:hover:before {
+	transform: scale(1.5) translate3d(0,0,0);
+	background-color: white;
+}
+
+#mainHeader nav ul li a {
+    /* width:150px; */
+    width: 200px;
+	color:white;
+	position:relative;
+	z-index:0;
+	opacity: 0;
+	left:-80px;
+	text-transform: uppercase;
+	transition: left 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045), opacity 0.15s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    color: #fff;
+    text-decoration:none;
+}
+
+#mainHeader nav ul li a:hover, 
+#mainHeader nav ul li a:active, 
+#mainHeader nav ul li a:visited, 
+#mainHeader nav ul li a:focus {
+    background-color: transparent !important;
+	color:white;
+}
+
+#mainHeader nav:hover:before {
+	width:160px;
+	transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#mainHeader nav:hover .burger {
+	transform: rotate(45deg) translate3d(0,0,0);
+}
+
+#mainHeader nav:hover .burger::before {
+    margin-top: 0px;
+	transform: rotate(-90deg) translate3d(0,0,0);
+}
+
+#mainHeader nav:hover .burger::after {
+    margin-top: 0px;
+	transform: rotate(0deg) translate3d(0,0,0);
+}
+
+#mainHeader nav:hover li a {
+	left:70px;
+	opacity: 1;
+	transition-duration: 0.4s;
+	transition-property: left, opacity;
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#mainHeader nav:hover li:nth-child(1) a { 
+	transition-delay: 0.3s;
+}
+
+#mainHeader nav:hover li:nth-child(2) a { 
+	transition-delay: 0.34s;
+}
+
+#mainHeader nav:hover li:nth-child(3) a { 
+	transition-delay: 0.38s;
+}
+
+#mainHeader nav:hover li:nth-child(4) a { 
+	transition-delay: 0.42s;
+}
+
+#mainHeader nav:hover li:nth-child(5) a { 
+	transition-delay: 0.46s;
+}
+
+#mainHeader nav:hover li:nth-child(6) a { 
+	transition-delay: 0.50s;
+}
+
+#mainHeader nav:hover li:nth-child(7) a { 
+	transition-delay: 0.54s;
+}
+
+#mainHeader nav:hover li:nth-child(8) a { 
+	transition-delay: 0.58s;
+}
+
+#mainHeader nav .bottom-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    width: 100%;
+    /* margin-top: calc(100vh - 125px); */
+    margin-top: calc(100vh - 90px);
+    z-index: 10;
+}
+
+#mainHeader nav .bottom-header a {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#mainHeader nav .bottom-header a svg {
+    fill: #fff;
+}
+
+/* INICIO */
+html {
+   overflow: hidden;
+}
+
+#inicio {
+  width: 100%;
+  height: 100vh;
+  background-color: #232323;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ #inicio .box {
+    width: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+ }
+
+#inicio .box .title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#inicio .box .title .block {
+    width: 0%;
+    height: inherit;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    display: flex;
+}
+
+#inicio .box .title h1 {
+    font-family: 'Poppins';
+    color: #fff;
+    font-size: 60px;
+    right: 0;
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+#inicio .box .title span {
+    color: #e89e00;
+    margin-left: 5px;
+}
+
+#inicio .box .role {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-top: -10px;
+}
+
+#inicio .box .role .block {
+    width: 0%;
+    height: inherit;
+    background: #cf8e00;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    display: flex;
+}
+
+#inicio .box .role p {
+    animation: secFadeIn 2s forwards;
+    animation-delay: 3.2s;
+    opacity: 0;
+    font-weight: 400;
+    font-family: 'Lato';
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* SLIDER FLICK */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(14, 29, 51, 0.8), rgba(14, 29, 51, 0.2)); 
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.hero-slider .flickity-slider {
+    height: 100vh;
+}
+
+.hero-slider .carousel-cell {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.hero-slider .carousel-cell .inner {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center; 
+}
+      
+.hero-slider .carousel-cell .inner .subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 40px;
+    line-height: 1.2em;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px; 
+}
+
+.hero-slider .carousel-cell .inner .title {
+    font-family: 'Poppins';
+    font-size: 60px;
+    /* line-height: 1.2em; */
+    text-transform: uppercase;
+    /* letter-spacing: 3px; */
+    margin-bottom: 40px; 
+}
+      
+.hero-slider .carousel-cell .inner .btn {
+    border: 1px solid #fff;
+    padding: 14px 18px;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease; 
+}
+
+.hero-slider .carousel-cell .inner .btn:hover {
+    border: 1px solid #e89e00;
+    background: #e89e00;
+    color: #fff; 
+}
+
+.hero-slider .flickity-prev-next-button {
+    display: none;
+}
+
+.hero-slider .flickity-page-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 60px; 
+    padding: 0;
+}
+
+.hero-slider .flickity-page-dots .dot {
+    width: 30px;
+    height: 4px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0 solid white;
+    border-radius: 0; 
+}
+
+.hero-slider .flickity-page-dots .dot.is-selected {
+    background: #e89e00;
+    border: 0 solid #e89e00; 
+}
+
+.hero-slider .flickity-page-dots .dot::marker {
+    color: transparent;
+}
+
+@media screen and (max-width: 576px) {
+    .hero-slider {
+        width: 90%;
+        margin-left: auto;
+    }
+    
+    .hero-slider .carousel-cell .inner .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-slider .carousel-cell .inner .title {
+        font-size: 1.5rem;
+    }
+
+    .hero-slider .carousel-cell .inner .btn {
+        font-size: 0.4rem;
+    }
+}
