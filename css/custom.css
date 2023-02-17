@@ -39,6 +39,10 @@ html {
     font-size: 16px;
 }
 
+.customClass::before {
+    background-color: #fff !important;
+}
+
 /* MENU VERTICAL */
 #mainHeader {
 	width: 60px;
