@@ -58,8 +58,14 @@ jQuery(document).ready(function(){
 
   $(function() {
     var loc = window.location.href; // returns the full URL
-    if(/#prueba1/.test(loc)) {
+    if(/#inicio/.test(loc)) {
+      $('#1').addClass('customClass');
+    } else if(/#prueba1/.test(loc)) {
       $('#2').addClass('customClass');
+    } else if(/#prueba2/.test(loc)) {
+      $('#3').addClass('customClass');
+    } else {
+      $('#4').addClass('customClass');
     }
   });
 });
