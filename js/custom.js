@@ -26,6 +26,8 @@ jQuery(document).ready(function(){
     });
   });
 
+  //
+  
   $("#1 > a").click(function(){
     $(this).parent().addClass("customClass");
     $("#2").removeClass('customClass');
