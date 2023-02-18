@@ -61,14 +61,12 @@ jQuery(document).ready(function(){
     if(/#inicio/.test(loc)) {
       $('#1').addClass('customClass');
     } 
+  });
+
+  $(function() {
+    var loc = window.location.href; // returns the full URL
     if(/#prueba1/.test(loc)) {
       $('#2').addClass('customClass');
     }  
-    if(/#prueba2/.test(loc)) {
-      $('#3').addClass('customClass');
-    } 
-    if(/#prueba3/.test(loc)) {
-      $('#4').addClass('customClass');
-    }
   });
 });
