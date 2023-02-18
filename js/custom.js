@@ -60,11 +60,14 @@ jQuery(document).ready(function(){
     var loc = window.location.href; // returns the full URL
     if(/#inicio/.test(loc)) {
       $('#1').addClass('customClass');
-    } else if(/#prueba1/.test(loc)) {
+    } 
+    if(/#prueba1/.test(loc)) {
       $('#2').addClass('customClass');
-    } else if(/#prueba2/.test(loc)) {
+    }  
+    if(/#prueba2/.test(loc)) {
       $('#3').addClass('customClass');
-    } else {
+    } 
+    if(/#prueba3/.test(loc)) {
       $('#4').addClass('customClass');
     }
   });
