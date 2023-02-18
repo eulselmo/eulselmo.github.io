@@ -26,8 +26,7 @@ jQuery(document).ready(function(){
     });
   });
 
-  //
-  
+  // Modifica de forma instantanea en que punto se encuentra el menú dentro de la web
   $("#1 > a").click(function(){
     $(this).parent().addClass("customClass");
     $("#2").removeClass('customClass');
@@ -56,6 +55,7 @@ jQuery(document).ready(function(){
     $("#3").removeClass('customClass');
   });
 
+  // Identifica al recarga la url para mostrar en que zona de la web se encuentra el menú
   $(function() {
     var loc = window.location.href; // returns the full URL
     if(/#inicio/.test(loc)) {
