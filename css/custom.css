@@ -530,3 +530,43 @@ html {
 .grid-item {
     background-color: blue;
 }
+
+/* PERFIL USUARIO */
+#prueba1 {
+    display: flex;
+}
+
+#prueba1 section {
+    width: 50%;
+}
+
+#prueba1 .image-portfolio {
+    background-image: url('../img/pexels-yogendra-singh-3748221.jpg');
+    background-color: #2b303c;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#prueba1 .image-portfolio section {
+    width: 80%;
+    height: 80%;
+    border: 25px solid #e89e00;
+}
+
+#prueba1 .text-portfolio {
+    background-color: #ececec;
+    /*background-image: url('../img/pexels-lukas-1420701.jpg');*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prueba1 .text-portfolio section {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 60px;
+}
