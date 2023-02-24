@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:wght@300;500;600;700display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.landing-body {
+    margin: 0;
+    padding: 0;
+    padding-left: 6.5rem;
+    position:relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    user-select: none;
+    background-color: #000; 
+}
+
+.landing-body h1 {
+    color:#3a4151;
+    position:absolute;
+    right:20px;
+    text-transform:uppercase;
+    text-align:right;
+    font-size:60px;
+    font-weight:700;
+}
+
+/* .landing-body a {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 14px;
+} */
+
+.customClass::before {
+    background-color: #fff !important;
+}
+
+/* MENU VERTICAL */
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 6.5rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #181818;
+}
+
+aside .logo {
+    width: 100%;
+    padding: 10px 0;
+    background: #000;
+}
+
+aside .logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside .logo a img {
+    width: 75%;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #282828;
+}
+
+aside nav a {
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #909096;
+    line-height: 2.2rem;
+    border-bottom: 1px solid #282828;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+aside nav a:hover {
+    color: #e89e00;
+}
+
+aside .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 10px;
+}
+
+aside .social-media a svg {
+    fill: #fff;
+}
+
+/* INICIO */
+html {
+   overflow: hidden;
+}
+
+#inicio {
+  width: 100%;
+  height: 100vh;
+  background-color: #232323;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ #inicio .box {
+    width: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+ }
+
+#inicio .box .title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#inicio .box .title .block {
+    width: 0%;
+    height: inherit;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    display: flex;
+}
+
+#inicio .box .title h1 {
+    font-family: 'Poppins';
+    color: #fff;
+    font-size: 60px;
+    right: 0;
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+#inicio .box .title span {
+    color: #e89e00;
+    margin-left: 5px;
+}
+
+#inicio .box .role {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-top: -10px;
+}
+
+#inicio .box .role .block {
+    width: 0%;
+    height: inherit;
+    background: #cf8e00;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    display: flex;
+}
+
+#inicio .box .role p {
+    animation: secFadeIn 2s forwards;
+    animation-delay: 3.2s;
+    opacity: 0;
+    font-weight: 400;
+    font-family: 'Lato';
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* SLIDER FLICK */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); 
+    /* background: linear-gradient(to bottom, rgba(14, 29, 51, 0.8), rgba(14, 29, 51, 0.2));  */
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.hero-slider .flickity-slider {
+    height: 100vh;
+}
+
+.hero-slider .carousel-cell {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.hero-slider .carousel-cell .inner {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center; 
+}
+      
+.hero-slider .carousel-cell .inner .subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 40px;
+    line-height: 1.2em;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px; 
+}
+
+.hero-slider .carousel-cell .inner .title {
+    font-family: 'Poppins';
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 40px; 
+}
+      
+.hero-slider .carousel-cell .inner .btn {
+    border: 1px solid #fff;
+    padding: 14px 18px;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease; 
+}
+
+.hero-slider .carousel-cell .inner .btn:hover {
+    border: 1px solid #e89e00;
+    background: #e89e00;
+    color: #fff; 
+}
+
+.hero-slider .flickity-prev-next-button {
+    display: none;
+}
+
+.hero-slider .flickity-page-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 60px; 
+    padding: 0;
+}
+
+.hero-slider .flickity-page-dots .dot {
+    width: 30px;
+    height: 4px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0 solid white;
+    border-radius: 0; 
+}
+
+.hero-slider .flickity-page-dots .dot.is-selected {
+    background: #e89e00;
+    border: 0 solid #e89e00; 
+}
+
+.hero-slider .flickity-page-dots .dot::marker {
+    color: transparent;
+}
+
+@media screen and (max-width: 576px) {
+    .hero-slider {
+        width: 90%;
+        margin-left: auto;
+    }
+    
+    .hero-slider .carousel-cell .inner .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-slider .carousel-cell .inner .title {
+        font-size: 1.5rem;
+    }
+
+    .hero-slider .carousel-cell .inner .btn {
+        font-size: 0.4rem;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    height: 100vh;
+    padding-left: 60px;
+} 
+
+.grid-item {
+    background-color: blue;
+}
+
+/* PERFIL USUARIO */
+#prueba1 {
+    display: flex;
+}
+
+#prueba1 section {
+    width: 50%;
+}
+
+#prueba1 .image-portfolio {
+    background-image: url('../img/pexels-yogendra-singh-3748221.jpg');
+    background-color: #2b303c;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#prueba1 .image-portfolio section {
+    width: 80%;
+    height: 80%;
+    border: 25px solid #e89e00;
+}
+
+#prueba1 .text-portfolio {
+    /* background-color: #ececec; */
+    background-image: url('../img/pexels-lukas-1420701.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prueba1 .text-portfolio section {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 60px;
+}
