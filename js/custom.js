@@ -23,6 +23,21 @@ jQuery(document).ready(function(){
       var image = slides[i];
       var x = (slide.target + flkty.x) * -1/3;
       image.style.backgroundPosition = x + 'px';
+      image.style.transform = "translateX(0%)!important";
+    });
+  });
+
+  var $carousel = $('.carousel').flickity({
+    // otras opciones
+    initialIndex: 0
+  });
+  
+  $carousel.on('scroll.flickity', function () {
+    $carousel.find('.carousel-cell').each(function (i, cell) {
+      var $cell = $(cell);
+      var x = ($cell.position().left - $carousel.position().left) - ($carousel.width() / 2) + ($cell.width() / 2);
+      $cell.css('background-position', x + 'px');
+      $cell.css('transform', 'translateX(0)');
     });
   });
 });
