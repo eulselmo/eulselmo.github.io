@@ -423,4 +423,8 @@ html {
     aside {
         display: none;
     }
+
+    .text-portfolio p {
+        display: none;
+    }
 }

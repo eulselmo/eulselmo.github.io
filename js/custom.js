@@ -177,22 +177,40 @@ jQuery(document).ready(function(){
 
 
     // LISTEN FOR WHEEL SCROLL 
-    addWheelListener( document.body, function(e) { 
+    // addWheelListener( document.body, function(e) { 
 
-      if (inTransition){
-        return;
-      };
+    //   if (inTransition){
+    //     return;
+    //   };
 
-      // DETERMINE WHEEL scrollDirection
-      if (e.deltaY > 0){
-        scrollDirection = "down";
-      } else if (e.deltaY < 0) {
-        scrollDirection = "up";
-      };
+    //   // DETERMINE WHEEL scrollDirection
+    //   if (e.deltaY > 0){
+    //     scrollDirection = "down";
+    //   } else if (e.deltaY < 0) {
+    //     scrollDirection = "up";
+    //   };
           
-      scrollLogic();
+    //   scrollLogic();
       
-    });
+    // });
+
+    // LISTEN FOR TOUCH SWIPE
+  $('#main').swipe({
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      if (inTransition) {
+        return;
+      }
+
+      // DETERMINE SWIPE DIRECTION
+      if (direction == "down") {
+        scrollDirection = "down";
+      } else if (direction == "up") {
+        scrollDirection = "up";
+      }
+
+      scrollLogic();
+    }
+  });
 
     // KeyStroke Support
     $(window).keydown(function(e){
