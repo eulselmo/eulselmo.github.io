@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
 });
 
 jQuery(document).ready(function(){
-  if (jQuery(window).width() <= 600) {
+  // if (jQuery(window).width() <= 600) {
     // VARIABLES
     var counter = 1;
     var scrollDirection;
@@ -228,5 +228,5 @@ jQuery(document).ready(function(){
       },
       threshold:100
     });
-  }
+  // }
 });
