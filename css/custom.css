@@ -27,18 +27,16 @@ html {
     font-weight:700;
 }
 
-/* .landing-body a {
-    font-family: 'Lato';
-    font-weight: 300;
-    font-size: 14px;
-} */
-
-.customClass::before {
-    background-color: #fff !important;
-}
-
 .flickity-viewport {
     transform: translateX(0);
+}
+
+#main {
+    transition: transform 1s ease;
+}
+
+#main section {
+    transform: translateZ(0);
 }
 
 /* MENU VERTICAL */
