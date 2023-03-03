@@ -42,6 +42,12 @@ jQuery(document).ready(function(){
   });
 });
 
+jQuery(document).ready(function(){
+  $('aside .boton-menu-mobile').on('click', function(){
+    $('body').toggleClass('tag-slide');
+  });
+});
+
 /*jQuery(document).ready(function(){
   // if (jQuery(window).width() <= 600) {
     // VARIABLES

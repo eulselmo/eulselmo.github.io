@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:wght@300;500;600;700display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:wght@100;300;500;600;700display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -15,6 +16,11 @@ html {
     overflow-x: hidden;
     user-select: none;
     background-color: #000; 
+    -webkit-transition: all 0.7s ease-in;
+    -moz-transition: all 0.7s ease-in;
+    -ms-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
 }
 
 .landing-body h1 {
@@ -25,6 +31,15 @@ html {
     text-align:right;
     font-size:60px;
     font-weight:700;
+}
+
+.tag-slide {
+    padding-left: 0;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -ms-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
 }
 
 .flickity-viewport {
@@ -39,6 +54,11 @@ html {
     transform: translateZ(0);
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
 /* MENU VERTICAL */
 aside {
     display: flex;
@@ -51,6 +71,11 @@ aside {
     left: 0;
     z-index: 3;
     background-color: #181818;
+    -webkit-transition: all 0.7s ease-in;
+    -moz-transition: all 0.7s ease-in;
+    -ms-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
 }
 
 aside .logo {
@@ -88,10 +113,32 @@ aside nav a {
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.2s linear 0.1s;
 }
 
 aside nav a:hover {
     color: #e89e00;
+    transition: color 0.2s linear 0.1s;
+}
+
+aside .boton-menu-mobile {
+    color: white;
+    width: 30px;
+    height: 60px;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 46.5vh;
+    left: 10rem;
+    font-weight: 800;
+    border-radius: 0 5px 5px 0;
+}
+
+aside .boton-menu-mobile i {
+    transform: rotate(0deg);
+    transition: all 0.7s ease-in;
 }
 
 aside .social-media {
@@ -104,6 +151,20 @@ aside .social-media {
 
 aside .social-media a svg {
     fill: #fff;
+}
+
+.tag-slide aside {
+    left: -10rem;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -ms-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+
+.tag-slide aside .boton-menu-mobile i {
+    transform: rotate(180deg);
+    transition: all 0.7s ease-out;
 }
 
 /* INICIO */
@@ -386,44 +447,140 @@ html {
 
 #prueba1 .image-portfolio {
     background-image: url('../img/pexels-yogendra-singh-3748221.jpg');
-    background-color: #2b303c;
+    background-color: #1d1d1d;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-}
-
-#prueba1 .image-portfolio section {
-    width: 80%;
-    height: 80%;
-    border: 25px solid #e89e00;
 }
 
 #prueba1 .text-portfolio {
-    /* background-color: #ececec; */
-    background-image: url('../img/pexels-lukas-1420701.jpg');
+    background-color: #1d1d1d;
+    /* background-image: url('../img/pexels-lukas-1420701.jpg'); */
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#prueba1 .text-portfolio section {
-    background-color: white;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 60px;
+#prueba1 .text-portfolio title {
+    display: block;
+    color: #515152;
+    z-index: 4;
+    position: absolute;
+    opacity: 0.1;
+    font-weight: bold;
+    top: -4rem;
+    left: 0;
+    font-family: 'Poppins';
+    font-size: 300px;
 }
 
-@media screen and (max-width: 600px) {
-    .landing-body {
-        padding-left: 0;
+#prueba1 .text-portfolio section {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    /* left: -10rem; */
+    padding: 4rem;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    line-height: 1.5;
+    color: white;
+    background-color: #1d1d1d;
+    border-top: 6px solid #e89e00;
+    border-left: 6px solid #e89e00;
+}
+
+#prueba1 .text-portfolio section:before {
+    content: '<section >';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 25px;
+    position: absolute;
+    margin-top: -15rem;
+    left: -1rem;
+}
+
+#prueba1 .text-portfolio section:after {
+    content: '<section />';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 25px;
+    position: absolute;
+    bottom: -11rem;
+    left: -1rem;
+}
+
+#prueba1 .text-portfolio section h2 {
+    position: absolute;
+    top: -7rem;
+    right: 0;
+    margin: 0;
+    font-size: 40px;
+}
+
+#prueba1 .text-portfolio section h2:before {
+    content: '<h2>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -1rem;
+    left: -1rem;
+}
+
+#prueba1 .text-portfolio section h2:after {
+    content: '<h2/>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    left: -1rem;
+    bottom: -2rem;
+}
+
+#prueba1 .text-portfolio section h2 strong {
+    color: #e89e00;
+    text-transform: uppercase;
+}
+
+#prueba1 .text-portfolio section p:before {
+    content: '<p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -2rem;
+    left: 2rem;
+}
+
+#prueba1 .text-portfolio section p:after {
+    content: '<p/>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    left: 2rem;
+    bottom: 1.5rem;
+}
+
+@media screen and (max-width: 991px) {
+    #prueba1 {
+        flex-wrap: wrap;
+    }
+    
+    #prueba1 section {
+        width: 100%;
+        height: 50vh;
     }
 
-    aside {
-        display: none;
+    #prueba1 .text-portfolio section {
+        
     }
+}
 
+@media screen and (max-width: 576px) {
     .text-portfolio p {
         display: none;
     }
