@@ -16,11 +16,11 @@ html {
     overflow-x: hidden;
     user-select: none;
     background-color: #000; 
-    -webkit-transition: all 0.7s ease-in;
-    -moz-transition: all 0.7s ease-in;
-    -ms-transition: all 0.7s ease-in;
-    -o-transition: all 0.7s ease-in;
-    transition: all 0.7s ease-in;
+    -webkit-transition: all 0.35s ease-in;
+    -moz-transition: all 0.35s ease-in;
+    -ms-transition: all 0.35s ease-in;
+    -o-transition: all 0.35s ease-in;
+    transition: all 0.35s ease-in;
 }
 
 .landing-body h1 {
@@ -35,11 +35,11 @@ html {
 
 .tag-slide {
     padding-left: 0;
-    -webkit-transition: all 0.7s ease-out;
-    -moz-transition: all 0.7s ease-out;
-    -ms-transition: all 0.7s ease-out;
-    -o-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.35s ease-out;
+    -moz-transition: all 0.35s ease-out;
+    -ms-transition: all 0.35s ease-out;
+    -o-transition: all 0.35s ease-out;
+    transition: all 0.35s ease-out;
 }
 
 .flickity-viewport {
@@ -71,11 +71,11 @@ aside {
     left: 0;
     z-index: 3;
     background-color: #181818;
-    -webkit-transition: all 0.7s ease-in;
-    -moz-transition: all 0.7s ease-in;
-    -ms-transition: all 0.7s ease-in;
-    -o-transition: all 0.7s ease-in;
-    transition: all 0.7s ease-in;
+    -webkit-transition: all 0.35s ease-in;
+    -moz-transition: all 0.35s ease-in;
+    -ms-transition: all 0.35s ease-in;
+    -o-transition: all 0.35s ease-in;
+    transition: all 0.35s ease-in;
 }
 
 aside .logo {
@@ -138,7 +138,7 @@ aside .boton-menu-mobile {
 
 aside .boton-menu-mobile i {
     transform: rotate(0deg);
-    transition: all 0.7s ease-in;
+    transition: all 0.35s ease-in;
 }
 
 aside .social-media {
@@ -155,11 +155,11 @@ aside .social-media a svg {
 
 .tag-slide aside {
     left: -10rem;
-    -webkit-transition: all 0.7s ease-out;
-    -moz-transition: all 0.7s ease-out;
-    -ms-transition: all 0.7s ease-out;
-    -o-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.35s ease-out;
+    -moz-transition: all 0.35s ease-out;
+    -ms-transition: all 0.35s ease-out;
+    -o-transition: all 0.35s ease-out;
+    transition: all 0.35s ease-out;
 }
 
 .tag-slide aside .boton-menu-mobile i {
@@ -405,7 +405,6 @@ html {
 
 @media screen and (max-width: 576px) {
     .hero-slider {
-        width: 90%;
         margin-left: auto;
     }
     
@@ -566,6 +565,10 @@ html {
 }
 
 @media screen and (max-width: 991px) {
+    .landing-body {
+        padding-left: 0;
+    }
+
     #inicio video {
         display: none;
     }
@@ -576,20 +579,82 @@ html {
     
     #prueba1 section {
         width: 100%;
-        height: 50vh;
+    }
+
+    #prueba1 .image-portfolio {
+        height: 45vh;
+    }
+
+    #prueba1 .text-portfolio {
+        height: 55vh;
+    }
+
+    #prueba1 .text-portfolio title {
+        font-size: 200px;
+        top: -2rem;
     }
 
     #prueba1 .text-portfolio section {
-        
+        top: 19vh;
+        padding: 3rem;
+        font-size: 16px;
+    }
+
+    #prueba1 .text-portfolio section:after {
+        bottom: -4rem;
+    }
+
+    #prueba1 .text-portfolio section:before {
+        margin-top: -13rem;
+    }
+
+    #prueba1 .text-portfolio section h2 {
+        font-size: 35px;
+        top: -6rem;
     }
 }
 
 @media screen and (max-width: 576px) {
     #inicio .box .title h1 {
-        font-size: 30px;
+        font-size: 40px;
     }
 
-    .text-portfolio p {
-        display: none;
+    #prueba1 .text-portfolio {
+        padding: 0 20px;
+    }
+
+    #prueba1 .text-portfolio section:after {
+        bottom: -2.5rem;
+    }
+
+    #prueba1 .text-portfolio section h2 {
+        font-size: 20px;
+        top: -5rem;
+    }
+
+    #prueba1 .text-portfolio section h2:before {
+        margin-top: -2rem;
+    }
+
+    #prueba1 .text-portfolio section h2:after {
+        bottom: -2.5rem;
+    }
+
+    #prueba1 .text-portfolio section {
+        top: 12vh;
+        padding: 2.5rem;
+    }
+
+    #prueba1 .text-portfolio p {
+        font-size: 11px;
+    }
+
+    #prueba1 .text-portfolio section p:after {
+        bottom: 0;
+    }
+
+    #prueba1 .text-portfolio title {
+        font-size: 100px;
+        top: -2rem;
     }
 }
