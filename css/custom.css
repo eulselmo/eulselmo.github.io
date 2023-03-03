@@ -566,6 +566,10 @@ html {
 }
 
 @media screen and (max-width: 991px) {
+    #inicio video {
+        display: none;
+    }
+
     #prueba1 {
         flex-wrap: wrap;
     }
@@ -581,6 +585,10 @@ html {
 }
 
 @media screen and (max-width: 576px) {
+    #inicio .box .title h1 {
+        font-size: 30px;
+    }
+
     .text-portfolio p {
         display: none;
     }
