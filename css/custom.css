@@ -436,14 +436,10 @@ html {
 /* STUDIES */
 #trayectoria {
     display: flex;
-    gap: 5%;
+    gap: 2%;
     width: 100%;
     height: 100vh;
     background-color: #1d1d1d;
-}
-
-#trayectoria > section {
-    width: 50%;
 }
 
 #trayectoria title {
@@ -460,6 +456,90 @@ html {
     line-height: 230px;
 }
 
+#trayectoria > section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+#trayectoria .contenido-experiencia::before {
+    content: '<section>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 25px;
+    position: absolute;
+    margin-top: -35rem;
+    left: 1rem;
+}
+
+#trayectoria .contenido-experiencia::after {
+    content: '</section>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 25px;
+    position: absolute;
+    bottom: 13rem;
+    left: 1rem;
+}
+
+#trayectoria .contenido-experiencia h2 {
+    margin: 0 0 60px 0;
+    font-size: 60px;
+    line-height: 55px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #cf8e00;
+}
+
+#trayectoria .contenido-experiencia h2::before {
+    content: '<h2>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -2.5rem;
+    left: 2rem;
+}
+
+#trayectoria .contenido-experiencia h2::after {
+    content: '</h2>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    left: 2rem;
+    bottom: 30.5rem;
+}
+
+#trayectoria .contenido-experiencia p {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: #fff;
+}
+
+#trayectoria .contenido-experiencia p::before {
+    content: '<p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -2.5rem;
+    left: 2rem;
+}
+
+#trayectoria .contenido-experiencia p::after {
+    content: '</p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 20px;
+    position: absolute;
+    left: 2rem;
+    bottom: 17rem;
+}
 
 /* SLIDER PROJECTS */
 .overlay {
