@@ -480,11 +480,12 @@ html {
     color: #515152;
     font-size: 25px;
     position: absolute;
-    bottom: 13rem;
+    bottom: 8rem;
     left: 1rem;
 }
 
 #trayectoria .contenido-experiencia h2 {
+    position: relative;
     margin: 0 0 60px 0;
     font-size: 60px;
     line-height: 55px;
@@ -499,8 +500,8 @@ html {
     color: #515152;
     font-size: 20px;
     position: absolute;
-    margin-top: -2.5rem;
-    left: 2rem;
+    top: -2.5rem;
+    left: -1rem;
 }
 
 #trayectoria .contenido-experiencia h2::after {
@@ -509,11 +510,12 @@ html {
     color: #515152;
     font-size: 20px;
     position: absolute;
-    left: 2rem;
-    bottom: 30.5rem;
+    left: -1rem;
+    bottom: -2.5rem;
 }
 
 #trayectoria .contenido-experiencia p {
+    position: relative;
     margin: 0;
     font-size: 18px;
     font-family: 'Poppins';
@@ -527,8 +529,8 @@ html {
     color: #515152;
     font-size: 20px;
     position: absolute;
-    margin-top: -2.5rem;
-    left: 2rem;
+    top: -2.5rem;
+    left: -1rem;
 }
 
 #trayectoria .contenido-experiencia p::after {
@@ -537,8 +539,8 @@ html {
     color: #515152;
     font-size: 20px;
     position: absolute;
-    left: 2rem;
-    bottom: 17rem;
+    left: -1rem;
+    bottom: -4rem;
 }
 
 /* SLIDER PROJECTS */
