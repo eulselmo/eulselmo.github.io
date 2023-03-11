@@ -920,6 +920,12 @@ html {
     }
 
     #sobre-mi .text-portfolio section h2 {
-        top: -4.5rem;
+        top: -3.5rem;
+    }
+
+    #trayectoria .contenido-experiencia h2 {
+        margin: 0 0 20px 0;
+        font-size: 20px;
+        line-height: 20px;
     }
 }
