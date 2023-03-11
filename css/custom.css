@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:wght@100;300;500;600;700display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 
 html {
@@ -172,7 +171,7 @@ aside .social-media a:nth-child(2) {
     transition: all 0.7s ease-out;
 }
 
-/* INICIO */
+/* HOME */
 html {
    overflow: hidden;
 }
@@ -189,14 +188,37 @@ html {
   align-items: center;
 }
 
- #inicio .box {
+#inicio video {
+    position:absolute; 
+    width:100%;
+    height: 100%; 
+    object-fit: cover;
+}
+
+#inicio picture {
+    display: none;
+    position:absolute;
+    width:100%;
+    height: 100%; 
+    background-color:#fff;
+}
+
+#inicio picture img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%);
+}
+
+#inicio .box {
     width: 600px;
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 15px;
- }
+}
 
 #inicio .box .title {
     width: 100%;
@@ -320,11 +342,11 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(100%);
 }
 
 #sobre-mi .text-portfolio {
     background-color: #1d1d1d;
-    /* background-image: url('../img/pexels-lukas-1420701.jpg'); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -433,16 +455,15 @@ html {
     bottom: 1.5rem;
 }
 
-/* STUDIES */
-#trayectoria {
+/* EXPERIENCE */
+#experiencia {
     display: flex;
-    gap: 2%;
     width: 100%;
     height: 100vh;
     background-color: #1d1d1d;
 }
 
-#trayectoria title {
+#experiencia .top-title {
     display: block;
     color: #515152;
     z-index: 4;
@@ -456,7 +477,21 @@ html {
     line-height: 230px;
 }
 
-#trayectoria > section {
+#experiencia .bottom-title {
+    display: block;
+    color: #515152;
+    z-index: 4;
+    position: absolute;
+    opacity: 0.1;
+    font-weight: bold;
+    bottom: 1rem;
+    right: 0;
+    font-family: 'Poppins';
+    font-size: 280px;
+    line-height: 230px;
+}
+
+#experiencia > section {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -464,7 +499,7 @@ html {
     padding: 60px;
 }
 
-#trayectoria .contenido-experiencia::before {
+#experiencia .contenido-experiencia::before {
     content: '<section>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
@@ -474,7 +509,7 @@ html {
     left: 1rem;
 }
 
-#trayectoria .contenido-experiencia::after {
+#experiencia .contenido-experiencia::after {
     content: '</section>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
@@ -484,7 +519,7 @@ html {
     left: 1rem;
 }
 
-#trayectoria .contenido-experiencia h2 {
+#experiencia .contenido-experiencia h2 {
     position: relative;
     margin: 0 0 60px 0;
     font-size: 60px;
@@ -494,7 +529,7 @@ html {
     color: #cf8e00;
 }
 
-#trayectoria .contenido-experiencia h2::before {
+#experiencia .contenido-experiencia h2::before {
     content: '<h2>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
@@ -504,7 +539,7 @@ html {
     left: -1rem;
 }
 
-#trayectoria .contenido-experiencia h2::after {
+#experiencia .contenido-experiencia h2::after {
     content: '</h2>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
@@ -514,7 +549,7 @@ html {
     bottom: -2.5rem;
 }
 
-#trayectoria .contenido-experiencia p {
+#experiencia .contenido-experiencia p {
     position: relative;
     margin: 0;
     font-size: 18px;
@@ -523,7 +558,7 @@ html {
     color: #fff;
 }
 
-#trayectoria .contenido-experiencia p::before {
+#experiencia .contenido-experiencia p::before {
     content: '<p>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
@@ -533,7 +568,7 @@ html {
     left: -1rem;
 }
 
-#trayectoria .contenido-experiencia p::after {
+#experiencia .contenido-experiencia p::after {
     content: '</p>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
@@ -541,6 +576,102 @@ html {
     position: absolute;
     left: -1rem;
     bottom: -4rem;
+}
+
+#experiencia .skills {
+    background: #181818;
+  }
+  
+#experiencia .skills-bar {
+    padding: 25px 30px;
+}
+  
+#experiencia .skills-bar .bar {
+  margin: 25px 0;
+}
+
+#experiencia .skills-bar .bar .info span {
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+#experiencia .skills-bar .bar .info {
+  width: 80%;
+  margin: 0 auto 8px auto;
+  color: #cf8e00;
+}
+
+#experiencia .skills-bar .bar .progress-line {
+  position: relative;
+  width: 80%;
+  height: 20px;
+  margin: auto;
+  background: #1d1d1d;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+#experiencia .bar .progress-line span {
+  position: absolute;
+  background: #fff;
+  height: 100%;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left; 
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+#experiencia .progress-line .html {
+  width: 80%;
+}
+
+#experiencia .progress-line .css {
+  width: 70%;
+}
+
+#experiencia .progress-line .bootstrap {
+  width: 82%;
+}
+
+#experiencia .progress-line .javascript {
+  width: 62%;
+}
+
+#experiencia .progress-line .c {
+  width: 90%;
+}
+
+#experiencia .bar .progress-line span::after {
+  opacity: 0;
+}
+
+#experiencia .progress-line .html::after {
+  content: "80%";
+}
+
+#experiencia .progress-line .css::after {
+  content: "70%";
+}
+
+#experiencia .progress-line .bootstrap::after {
+  content: "82%";
+}
+
+#experiencia .progress-line .javascript::after {
+  content: "62%";
+}
+
+#experiencia .progress-line .c::after {
+  content: "90%";
 }
 
 /* SLIDER PROJECTS */
@@ -553,8 +684,7 @@ html {
     left: 0;
     right: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); 
-    opacity: .7;
-    /* background: linear-gradient(to bottom, rgba(14, 29, 51, 0.8), rgba(14, 29, 51, 0.2));  */
+    opacity: 1;
 }
 
 .hero-slider {
@@ -652,6 +782,7 @@ html {
     color: transparent;
 }
 
+/* RESPONSIVE */
 @media screen and (max-width: 1300px) {
     #sobre-mi .text-portfolio {
         width: 65%;
@@ -685,6 +816,10 @@ html {
 @media screen and (max-width: 991px) {
     .landing-body {
         padding-left: 0;
+    }
+
+    #inicio picture {
+        display: block;
     }
 
     #inicio video {
@@ -736,45 +871,63 @@ html {
         font-size: 14px;
     }
 
-    #trayectoria {
+    #experiencia {
         flex-wrap: wrap;
         gap: 0;
     }
 
-    #trayectoria title {
+    #experiencia .top-title,
+    #experiencia .bottom-title {
         font-size: 140px;
         line-height: 130px;
     }
 
-    #trayectoria > section {
+    #experiencia > section {
         width: 100%;
         height: 50vh;
         padding: 0 60px;
     }
 
-    #trayectoria .contenido-experiencia::before {
+    #experiencia .contenido-experiencia::before {
         top: 1rem;
     }
 
-    #trayectoria .contenido-experiencia::after {
+    #experiencia .contenido-experiencia::after {
         bottom: 1rem;
     }
 
-    #trayectoria .contenido-experiencia h2 {
+    #experiencia .contenido-experiencia h2 {
         font-size: 35px;
         line-height: 30px;
     }
 
-    #trayectoria .contenido-experiencia p {
+    #experiencia .contenido-experiencia p {
         font-size: 14px;
     }
     
-    #trayectoria .contenido-experiencia p::before {
+    #experiencia .contenido-experiencia p::before {
         top: -2rem;
     }
 
-    #trayectoria .contenido-experiencia p::after {
+    #experiencia .contenido-experiencia p::after {
         bottom: -2rem;
+    }
+
+    #experiencia .skills-bar {
+        padding: 0;
+    }
+    
+    #experiencia .skills-bar .bar .info {
+        margin: 0 0 8px 0;
+    }
+
+    #experiencia .skills-bar .bar .info span {
+        font-size: 16px;
+    }
+
+    #experiencia .skills-bar .bar .progress-line{
+        width: 100%;
+        height: 10px;
     }
 }
 
@@ -839,51 +992,53 @@ html {
         top: -2rem;
     }
 
-    #trayectoria title {
+    #experiencia .top-title,
+    #experiencia .bottom-title {
         font-size: 60px;
         line-height: 50px;
     }
 
-    #trayectoria > section {
+    #experiencia .contenido-experiencia {
+        height: 40vh;
+    }
+
+    #experiencia .skills {
+        height: 60vh;
+    }
+
+    #experiencia > section {
         padding: 0 45px;
     }
-
-    #trayectoria .contenido-experiencia::before {
-        font-size: 18px;
-    }
-
-    #trayectoria .contenido-experiencia::after {
-        font-size: 18px;
-    }
     
-    #trayectoria .contenido-experiencia h2 {
+    #experiencia .contenido-experiencia h2 {
         margin: 0 0 55px 0;
         font-size: 20px;
         line-height: 15px;
     }
 
-    #trayectoria .contenido-experiencia h2::before {
-        top: -1.5rem;
-        font-size: 16px;
-    }
-
-    #trayectoria .contenido-experiencia h2::after {
-        bottom: -1.5rem;
-        font-size: 16px;
-    }
-
-    #trayectoria .contenido-experiencia p {
+    #experiencia .contenido-experiencia p {
         font-size: 11px;
     }
 
-    #trayectoria .contenido-experiencia p::before {
-        top: -2rem;
-        font-size: 18px;
+    #experiencia .contenido-experiencia::before,
+    #experiencia .contenido-experiencia::after,
+    #experiencia .contenido-experiencia h2::before,
+    #experiencia .contenido-experiencia h2::after,
+    #experiencia .contenido-experiencia p::before,
+    #experiencia .contenido-experiencia p::after {
+        content: '';
     }
 
-    #trayectoria .contenido-experiencia p::after {
-        bottom: -2rem;
-        font-size: 18px;
+    #experiencia .skills-bar .bar {
+        margin: 15px 0;
+    }
+
+    #experiencia .skills-bar .bar .info span {
+        font-size: 11px;
+    }
+
+    #experiencia .skills-bar .bar .progress-line {
+        height: 5px;
     }
 
     .hero-slider {
@@ -909,21 +1064,19 @@ html {
     #sobre-mi .text-portfolio section h2:before,
     #sobre-mi .text-portfolio section h2::after,
     #sobre-mi .text-portfolio section p:before,
-    #sobre-mi .text-portfolio section p::after,
-    #trayectoria .contenido-experiencia::before,
-    #trayectoria .contenido-experiencia::after,
-    #trayectoria .contenido-experiencia h2::before,
-    #trayectoria .contenido-experiencia h2::after,
-    #trayectoria .contenido-experiencia p::before,
-    #trayectoria .contenido-experiencia p::after {
+    #sobre-mi .text-portfolio section p::after {
         content: '';
+    }
+
+    #sobre-mi .text-portfolio section {
+        padding: 2rem;
     }
 
     #sobre-mi .text-portfolio section h2 {
         top: -3.5rem;
     }
 
-    #trayectoria .contenido-experiencia h2 {
+    #experiencia .contenido-experiencia h2 {
         margin: 0 0 20px 0;
         font-size: 20px;
         line-height: 20px;
