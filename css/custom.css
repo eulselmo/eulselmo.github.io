@@ -904,12 +904,19 @@ html {
 }
 
 @media screen and (max-width: 375px) {
-    #sobre-mi .text-portfolio section:before {
-        top: -7rem;
-    }
-
-    #sobre-mi .text-portfolio section:after {
-        bottom: -2rem;
+    #sobre-mi .text-portfolio section:before,
+    #sobre-mi .text-portfolio section:after,
+    #sobre-mi .text-portfolio section h2:before,
+    #sobre-mi .text-portfolio section h2::after,
+    #sobre-mi .text-portfolio section p:before,
+    #sobre-mi .text-portfolio section p::after,
+    #trayectoria .contenido-experiencia::before,
+    #trayectoria .contenido-experiencia::after,
+    #trayectoria .contenido-experiencia h2::before,
+    #trayectoria .contenido-experiencia h2::after,
+    #trayectoria .contenido-experiencia p::before,
+    #trayectoria .contenido-experiencia p::after {
+        content: '';
     }
 
     #sobre-mi .text-portfolio section h2 {
