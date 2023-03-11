@@ -648,6 +648,7 @@ html {
 }
 
 .hero-slider .flickity-page-dots .dot::marker {
+    content: '';
     color: transparent;
 }
 
