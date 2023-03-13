@@ -455,6 +455,10 @@ html {
     bottom: 1.5rem;
 }
 
+#sobre-mi .text-portfolio section p strong {
+    color: #e89e00;
+}
+
 /* EXPERIENCE */
 #experiencia {
     display: flex;
